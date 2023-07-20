@@ -114,5 +114,7 @@ if (mysqli_num_rows($result) > 0) {
 ![img2](https://github.com/LatifahAbuhamamah/Control-Panel-Using-PhP/blob/main/Data.png)
 ![img3](https://github.com/LatifahAbuhamamah/Control-Panel-Using-PhP/blob/main/Database.png)
 ### Screen recording showcasing the task execution
-![Video](https://github.com/LatifahAbuhamamah/Control-Panel-Using-PhP/blob/main/Rec.mp4)
+
+https://github.com/LatifahAbuhamamah/Control-Panel-Using-PhP/assets/139233344/88289945-2e09-4d0c-b547-2ba3a0f26dfc
+
 
