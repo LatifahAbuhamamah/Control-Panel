@@ -1,5 +1,5 @@
 # Control-Panel-Using-PhP
-## Explanation of the Control Panel HTML&PHP
+## 1.Explanation of the Control Panel HTML&PHP
 ### HTML
 ```
 <!DOCTYPE html>
@@ -108,3 +108,6 @@ if (mysqli_num_rows($result) > 0) {
 ?>
 ```
 - This PHP code connects to a MySQL database and handles the data from a control panel for a robot. When a direction is selected on the control panel, the code saves it in the database. Then, it retrieves and displays the last direction that was saved in the database
+
+#2.Screenshot of the completed task
+![img1](
