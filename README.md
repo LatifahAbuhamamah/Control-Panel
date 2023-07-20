@@ -75,6 +75,7 @@
 - The HTML structure includes a title, a set of buttons, and a script section for JavaScript.
 - The buttons are styled using CSS to have a specific appearance.
 - Each button is associated with an `onclick` event that triggers a JavaScript function called `move()` when clicked.
+- The `move()` function is responsible for redirecting the user to the `getdata.php` file with a parameter indicating the desired direction
   ### PHP
 ```
 
@@ -106,5 +107,4 @@ if (mysqli_num_rows($result) > 0) {
 }
 ?>
 ```
-
-- The `move()` function is responsible for redirecting the user to the `getdata.php` file with a parameter indicating the desired direction.
+- This PHP code connects to a MySQL database and handles the data from a control panel for a robot. When a direction is selected on the control panel, the code saves it in the database. Then, it retrieves and displays the last direction that was saved in the database
