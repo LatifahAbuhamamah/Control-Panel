@@ -110,4 +110,6 @@ if (mysqli_num_rows($result) > 0) {
 - This PHP code connects to a MySQL database and handles the data from a control panel for a robot. When a direction is selected on the control panel, the code saves it in the database. Then, it retrieves and displays the last direction that was saved in the database
 
 #2.Screenshot of the completed task
-![img1](
+![img1](https://github.com/LatifahAbuhamamah/Control-Panel-Using-PhP/blob/main/Robot-CP.png)
+![img2](https://github.com/LatifahAbuhamamah/Control-Panel-Using-PhP/blob/main/Data.png)
+![img3](https://github.com/LatifahAbuhamamah/Control-Panel-Using-PhP/blob/main/Database.png)
