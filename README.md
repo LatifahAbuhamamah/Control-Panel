@@ -76,7 +76,7 @@
 - The buttons are styled using CSS to have a specific appearance.
 - Each button is associated with an `onclick` event that triggers a JavaScript function called `move()` when clicked.
 - The `move()` function is responsible for redirecting the user to the `getdata.php` file with a parameter indicating the desired direction
-  ### PHP
+### PHP
 ```
 
 <?php
@@ -107,7 +107,7 @@ if (mysqli_num_rows($result) > 0) {
 }
 ?>
 ```
-- This PHP code connects to a MySQL database and handles the data from a control panel for a robot. When a direction is selected on the control panel, the code saves it in the database. Then, it retrieves and displays the last direction that was saved in the database
+- This PHP code connects to a MySQL database and handles the data from a control panel for a robot. When a direction is selected on the control panel, the code saves it in the database. Then, it retrieves and displays the last direction that was saved in the database.
 
 ## 2. Task Execution:
 ![img1](https://github.com/LatifahAbuhamamah/Control-Panel-Using-PhP/blob/main/Robot-CP.png)
@@ -118,5 +118,27 @@ if (mysqli_num_rows($result) > 0) {
 ### Screen recording showcasing the task execution
 https://github.com/LatifahAbuhamamah/Control-Panel-Using-PhP/assets/139233344/88289945-2e09-4d0c-b547-2ba3a0f26dfc
 
-### 3. Algorithm for Linking Page `getdata.php` with the Engines:
+### 3. Algorithm for Linking Page with the Engines:
+
+**Receive the Direction:**
+   - Capture the direction from the control panel or any input source.
+
+**Mapping Directions to Actions:**
+   - Create a mapping between the received directions and the corresponding actions to be executed by the robot's motors or actuators.
+   - For example:
+     - If the direction is "Forward," instruct the motors to move the robot forward.
+     - If the direction is "Left," adjust the motors to turn the robot to the left.
+     - If the direction is "Right," adjust the motors to turn the robot to the right.
+     - If the direction is "Backward," set the motors to move the robot backward.
+     - If the direction is "Stop," stop the motors to halt the robot's movement.
+
+**Control the Robot's Engines:**
+   - Based on the received direction, execute the corresponding action as mapped in step 2.
+   - Use appropriate signals, commands, or data to control the robot's motors or actuators.
+   - The actual implementation of this step will depend on the hardware and communication interface used to control the robot.
+
+**Safety Measures (Important):**
+   - Implement safety measures to handle exceptional cases, such as collisions, out-of-range values, or emergency stops.
+ 
+
 
