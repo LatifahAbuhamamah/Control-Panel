@@ -111,10 +111,11 @@ if (mysqli_num_rows($result) > 0) {
 
 ## 2.Task Execution
 ![img1](https://github.com/LatifahAbuhamamah/Control-Panel-Using-PhP/blob/main/Robot-CP.png)
+
 ![img2](https://github.com/LatifahAbuhamamah/Control-Panel-Using-PhP/blob/main/Data.png)
+
 ![img3](https://github.com/LatifahAbuhamamah/Control-Panel-Using-PhP/blob/main/Database.png)
 ### Screen recording showcasing the task execution
-
 https://github.com/LatifahAbuhamamah/Control-Panel-Using-PhP/assets/139233344/88289945-2e09-4d0c-b547-2ba3a0f26dfc
 
-
+### 3.Algorithm for Linking the Page `getdata.php` with the Engines
