@@ -101,7 +101,7 @@
         /* Media query for small devices, such as phones */
         @media screen and (max-width: 480px) {
              body{
-                font-size: 20px;
+                font-size: 10px;
              }
             .direction-btn {
                 font-size: 20px;
