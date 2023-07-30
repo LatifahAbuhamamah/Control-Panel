@@ -138,8 +138,8 @@
     </div>
 
     <script>
-        $(document).ready(function() {
-            $('.direction-btn').click(function() {
+            $(document).ready(function() {
+            $('.direction-btn, .direction-btnn').click(function() {
                 const direction = $(this).data('direction');
                 sendDirection(direction);
             });
