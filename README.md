@@ -100,6 +100,9 @@
     
         /* Media query for small devices, such as phones */
         @media screen and (max-width: 480px) {
+             body{
+                font-size: 20px;
+             }
             .direction-btn {
                 font-size: 20px;
                 padding: 15px 30px;
@@ -117,7 +120,7 @@
                 border-width: 4px;
             }
             .Dire {
-                width: 200px;
+                width: 100px;
             }
         }
     
