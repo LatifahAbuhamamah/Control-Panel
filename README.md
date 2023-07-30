@@ -253,20 +253,7 @@ This PHP code connects to the same MySQL database and retrieves the last directi
 ### Screen recording showcasing the task execution
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+https://github.com/LatifahAbuhamamah/Control-Panel.github.io/assets/139233344/b95a3e2a-9511-4919-abec-3d4113260323
 
 
 
