@@ -249,15 +249,6 @@ This PHP code connects to the same MySQL database and retrieves the last directi
 - If the query returns a result, it prints the direction on the page. Otherwise, it displays "0 results".
 
 
-
-
-
-
-
-
-
-
-
 ## 4. Task Execution:
 ### Screen recording showcasing the task execution
 
@@ -279,7 +270,7 @@ This PHP code connects to the same MySQL database and retrieves the last directi
 
 
 
-## 3. Algorithm for Linking "Retrieve Last Direction" Page to Engines
+## .5 Algorithm for Linking "Retrieve Last Direction" Page to Engines
 
 **Step1: Receive the Direction**
    - Capture the direction from the control panel or any input source.
