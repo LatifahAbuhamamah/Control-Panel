@@ -255,7 +255,7 @@ This PHP code connects to the same MySQL database and retrieves the last directi
 
 https://github.com/LatifahAbuhamamah/Control-Panel.github.io/assets/139233344/b95a3e2a-9511-4919-abec-3d4113260323
 
-
+Link: https://latifahabuhamamah.github.io/Control-Panel.github.io/
 
 ## .5 Algorithm for Linking "Retrieve Last Direction" Page to Engines
 
