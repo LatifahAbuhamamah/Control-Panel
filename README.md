@@ -258,14 +258,8 @@ This PHP code connects to the same MySQL database and retrieves the last directi
 
 
 
-## 2. Task Execution:
-![img1](https://github.com/LatifahAbuhamamah/Control-Panel-Using-PhP/blob/main/Robot-CP.png)
-
-![img2](https://github.com/LatifahAbuhamamah/Control-Panel-Using-PhP/blob/main/Data.png)
-
-![img3](https://github.com/LatifahAbuhamamah/Control-Panel-Using-PhP/blob/main/Database.png)
+## 4. Task Execution:
 ### Screen recording showcasing the task execution
-https://github.com/LatifahAbuhamamah/Control-Panel-Using-PhP/assets/139233344/88289945-2e09-4d0c-b547-2ba3a0f26dfc
 
 
 
@@ -283,12 +277,14 @@ https://github.com/LatifahAbuhamamah/Control-Panel-Using-PhP/assets/139233344/88
 
 
 
-### 3. Algorithm for Linking Page with the Engines:
 
-**Receive the Direction:**
+
+## 3. Algorithm for Linking "Retrieve Last Direction" Page to Engines
+
+**Step1: Receive the Direction**
    - Capture the direction from the control panel or any input source.
 
-**Mapping Directions to Actions:**
+**Step2: Mapping Directions to Actions**
    - Create a mapping between the received directions and the corresponding actions to be executed by the robot's motors or actuators.
    - For example:
      - If the direction is "Forward," instruct the motors to move the robot forward.
@@ -297,13 +293,11 @@ https://github.com/LatifahAbuhamamah/Control-Panel-Using-PhP/assets/139233344/88
      - If the direction is "Backward," set the motors to move the robot backward.
      - If the direction is "Stop," stop the motors to halt the robot's movement.
 
-**Control the Robot's Engines:**
+**Step3: Control the Robot's Engines:**
    - Based on the received direction, execute the corresponding action as mapped in step 2.
    - Use appropriate signals, commands, or data to control the robot's motors or actuators.
    - The actual implementation of this step will depend on the hardware and communication interface used to control the robot.
 
-**Safety Measures (Important):**
+**Step4: Safety Measures (Important)**
    - Implement safety measures to handle exceptional cases, such as collisions, out-of-range values, or emergency stops.
  
-
-
