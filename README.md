@@ -9,17 +9,19 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>Robot Control Panel</title>
-    <style>
-      body {
+ <style>
+    body {
             font-family: Arial, sans-serif;
             text-align: center;
             padding: 100px;
-            margin: 40px;
+            margin: 70px;
             color: #17617E;
+
         }
         .control-panel {
             display: flex;
             justify-content: center;
+            
         }
         .direction-btn {
             background-color: #297b9b;
@@ -77,33 +79,16 @@
             top: -4px;
             z-index: 2;
         }
-        .swal-button--ok {
-        background-color:#17617E ; 
-        color: #ffffff; 
+        .Dire{
+            width: 400px;
+           height: 300px;
+            
         }
-        .swal-button--ok:hover {
-        background-color: rgb(116, 180, 208);
-        }
-       .swal-button--lastValue {
-        background-color: #a72754; 
-        color: #ffffff; 
-       }
-        .swal-button--lastValue:hover {
-        background-color: rgb(116, 180, 208);
-        }
-
-        .swal-error--error {
-        background-color:#17617E ; 
-        color: #ffffff; 
-        }
-        
     
         /* Media query for small devices, such as phones */
         @media screen and (max-width: 480px) {
-             body{
-                font-size: 10px;
-             }
-            .direction-btn {
+           
+            .direction-btn { 
                 font-size: 20px;
                 padding: 15px 30px;
             }
@@ -120,82 +105,63 @@
                 border-width: 4px;
             }
             .Dire {
-                width: 100px;
+                width: 300px;
+               
             }
         }
-    
+
     </style>
 </head>
 <body>
-    <h1>Robot Control Panel</h1>
-    <div class="control-panel">
-        <button class="direction-btn" data-direction="Forward">↑</button>
+<div class="control-panel">
+        <button class="direction-btn" data-direction="forward">↑</button>
     </div>
     <div class="control-panel">
-        <button class="direction-btn" data-direction="Left">←</button>
-        <button class="direction-btnn" data-direction="Stop">Stop</button>
-        <button class="direction-btn" data-direction="Right">→</button>
+        <button class="direction-btn" data-direction="left">←</button>
+        <button class="direction-btnn" data-direction="stop">Stop</button>
+        <button class="direction-btn" data-direction="right">→</button>
     </div>
     <div class="control-panel">
-        <button class="direction-btn" data-direction="Backward">↓</button>
+        <button class="direction-btn" data-direction="backward">↓</button>
     </div>
 
-    <script>
-            $(document).ready(function() {
-            $('.direction-btn, .direction-btnn').click(function() {
-                const direction = $(this).data('direction');
-                sendDirection(direction);
-            });
+  <script>
+    $(document).ready(function() {
+    $('.direction-btn, .direction-btnn').click(function() {
+        const direction = $(this).data('direction');
+        sendDirection(direction);
+    });
 
-            function sendDirection(direction) {
-                const validDirections = ["Backward", "Stop", "Left", "Right", "Forward"];
-                if (!validDirections.includes(direction)) {
-                    return;
+    function sendDirection(direction) {
+        const validDirections = ["backward", "stop", "left", "right", "forward"];
+        if (!validDirections.includes(direction)) {
+            return;
+        }
+        const xhr = new XMLHttpRequest();
+        const url = `store_direction.php?direction=${encodeURIComponent(direction)}`;
+        xhr.open("GET", url, true);
+
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    swal({
+                        title: "Data successfully stored",
+                        text: direction,
+                        icon: "success",
+                        timer: 2000,
+                        button: false,
+                        className:"Dire"
+                    });
+                    
                 }
-                const xhr = new XMLHttpRequest();
-                const url = `store_direction.php?direction=${encodeURIComponent(direction)}`;
-                xhr.open("GET", url, true);
-
-                xhr.onreadystatechange = function() {
-                    if (xhr.readyState === XMLHttpRequest.DONE) {
-                        if (xhr.status === 200) {
-                            swal({
-                                title: "Data successfully stored",
-                                text: direction,
-                                icon: "success",
-                                buttons: {
-                                    ok: {
-                                        text: "OK",
-                                        value: "ok",
-                                        className: "swal-button--ok",
-                                    },
-                                    lastValue: {
-                                        text: "Last Value?",
-                                        value: "lastValue",
-                                        className:"swal-button--lastValue",
-                                    },
-                                },
-                            }).then((value) => {
-                                if (value === "lastValue") {
-                                    window.location.href = "get_direction.php";
-                                }
-                            });
-                        } else {
-                            swal({
-                                title: "Error",
-                                text: "Failed to store data",
-                                icon: "error",
-                                className:"swal-error--error",
-                            });
-                        }
-                    }
-                };
-                xhr.send();
             }
-        });
-    
-    </script>
-</body>
+        };
+        xhr.send();
+    }
+});
+
+</script>
+</body> 
 </html>
 ```
 This code creates a web page for a robot control panel. It includes some styling with CSS and uses jQuery for handling button clicks and making AJAX requests.
@@ -204,7 +170,7 @@ This code creates a web page for a robot control panel. It includes some styling
 - The JavaScript code uses jQuery to simplify event handling. When any direction button is clicked, it calls the `sendDirection()` function, passing the direction as a data attribute.
 - The `sendDirection()` function checks if the selected direction is valid. If it is, it sends an AJAX request to the server to store the direction using the SweetAlert library to show success or error messages.
 
-## 2. PHP Code to Store Direction
+## 2. PHP Code to Connect and Store Directions in the Database
 ```
 <?php
 
@@ -237,7 +203,7 @@ $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
     $row = mysqli_fetch_assoc($result);
-    echo "    " . $row["direction"];
+    echo $row["direction"];
 } else {
     echo "0 results";
 }
@@ -247,16 +213,12 @@ mysqli_close($conn);
 ?>
 ```
 This PHP code connects to the same MySQL database and retrieves the last direction that was stored.
-
 - It queries the database for the last inserted direction using an SQL query with `ORDER BY id DESC LIMIT 1`. This ensures that the most recent direction is fetched.
 - If the query returns a result, it prints the direction on the page. Otherwise, it displays "0 results".
 
 
 ## 4. Task Execution:
-### Screen recording showcasing the task execution
 
-
-https://github.com/LatifahAbuhamamah/Control-Panel.github.io/assets/139233344/b95a3e2a-9511-4919-abec-3d4113260323
 
 
 ## .5 Algorithm for Linking "Retrieve Last Direction" Page to Engines
