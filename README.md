@@ -192,7 +192,7 @@ if (isset($_GET['direction'])) {
 
 ?>
 ```
-This PHP code connects to a MySQL database and stores the direction received from the control panel page.
+- This PHP code connects to a MySQL database and stores the direction received from the control panel page.
 - It establishes a connection to the MySQL database using `mysqli_connect()`.
 - If the script receives a direction (sent as a GET parameter), it inserts that direction into the database using an SQL query.
 
@@ -221,7 +221,18 @@ mysqli_close($conn);
 
 
 ## 4. Task Execution:
-![
+![image1](https://github.com/LatifahAbuhamamah/Control-Panel/blob/main/1.png)
+![image2](https://github.com/LatifahAbuhamamah/Control-Panel/blob/main/2.png)
+![image3](https://github.com/LatifahAbuhamamah/Control-Panel/blob/main/3.png)
+![image4](https://github.com/LatifahAbuhamamah/Control-Panel/blob/main/4.png)
+
+
+
+
+
+
+
+
 
 
 ## .5 Algorithm for Linking "Retrieve Last Direction" Page to Engines
