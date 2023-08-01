@@ -164,11 +164,14 @@
 </body> 
 </html>
 ```
-This code creates a web page for a robot control panel. It includes some styling with CSS and uses jQuery for handling button clicks and making AJAX requests.
-- The HTML part defines the layout of the control panel with buttons for different directions (Forward, Backward, Left, Right, Stop).
-- CSS is used to style the page, including button appearance and colors.
-- The JavaScript code uses jQuery to simplify event handling. When any direction button is clicked, it calls the `sendDirection()` function, passing the direction as a data attribute.
-- The `sendDirection()` function checks if the selected direction is valid. If it is, it sends an AJAX request to the server to store the direction using the SweetAlert library to show success or error messages.
+- This code creates a web page for a robot control panel with buttons to control its movement.
+- The control panel has buttons for "Forward," "Backward," "Left," "Right," and "Stop" directions.
+- The web page includes CSS styling to make the buttons look visually appealing.
+- The JavaScript code uses jQuery to handle button clicks and AJAX requests.
+- When any direction button is clicked, the `sendDirection()` function is called with the selected direction as a data attribute.
+- The `sendDirection()` function checks if the selected direction is valid (one of "backward," "stop," "left," "right," or "forward").
+- If the direction is valid, an AJAX request is sent to the server with the selected direction as a parameter.
+- When the AJAX request is successful, the SweetAlert library is used to show a success message with the stored direction, which disappears after 2 seconds.
 
 ## 2. PHP Code to Connect and Store Directions in the Database
 ```
@@ -212,13 +215,13 @@ mysqli_close($conn);
 
 ?>
 ```
-This PHP code connects to the same MySQL database and retrieves the last direction that was stored.
+- This PHP code connects to the same MySQL database and retrieves the last direction that was stored.
 - It queries the database for the last inserted direction using an SQL query with `ORDER BY id DESC LIMIT 1`. This ensures that the most recent direction is fetched.
 - If the query returns a result, it prints the direction on the page. Otherwise, it displays "0 results".
 
 
 ## 4. Task Execution:
-
+![
 
 
 ## .5 Algorithm for Linking "Retrieve Last Direction" Page to Engines
