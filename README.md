@@ -1,6 +1,6 @@
 # Robot Control Panel
 ## 1. HTML, CSS, and JavaScript with jQuery
-```html, css, javascript
+```htmlmixed
 
 <!DOCTYPE html>
 <html lang="en">
