@@ -1,6 +1,6 @@
 # Robot Control Panel
 ## 1. HTML, CSS, and JavaScript with jQuery
-```html
+```html, css, javascript
 
 <!DOCTYPE html>
 <html lang="en">
@@ -175,7 +175,7 @@
 - When the AJAX request is successful, the SweetAlert library is used to show a success message with the stored direction, which disappears after 2 seconds.
 
 ## 2. PHP Code to Connect and Store Directions in the Database
-```cpp
+```php
 <?php
 
 $conn = mysqli_connect('localhost', 'root', '', 'control');
@@ -198,7 +198,7 @@ if (isset($_GET['direction'])) {
 - If the script receives a direction (sent as a GET parameter), it inserts that direction into the database using an SQL query.
 
 ## 3. PHP Code to Retrieve Last Direction
-```cpp
+```php
 <?php
 $conn = mysqli_connect('localhost', 'root', '', 'control');
 
